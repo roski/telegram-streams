@@ -1,0 +1,24 @@
+{
+  "name": "telegram-streams",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/telegram-streams/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "telegram-streams:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "telegram-streams:build:development"
+        },
+        "production": {
+          "buildTarget": "telegram-streams:build:production"
+        }
+      }
+    }
+  }
+}
