@@ -7,7 +7,6 @@ import { BotScene } from '@telegram-streams/models';
 export class BotUpdate {
   @Start()
   async start(ctx: SceneContext) {
-    console.warn(ctx);
     Logger.log(ctx.session, `SESSION - START`);
     await ctx.scene.enter(BotScene.Home);
   }
