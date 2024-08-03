@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "nx run-many build --target=build --all",
     "telegram-streams:serve": "nx serve telegram-streams"
   },
   "private": true,
