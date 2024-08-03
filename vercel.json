@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/apps/telegram-streams/main.js",
+      "src": "dist/apps/telegram-streams/",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/apps/telegram-streams/main.js"
+      "dest": "dist/apps/telegram-streams/"
     }
   ]
 }
