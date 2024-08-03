@@ -13,7 +13,7 @@ const HOME_KEYBOARD = [
 export class HomeScene {
   @SceneEnter()
   async start(@Ctx() ctx: SceneContext) {
-    await ctx.reply('Welcome here! What would you like to do?', {
+    await ctx.reply('Welcome! What would you like to do?', {
       reply_markup: {
         inline_keyboard: HOME_KEYBOARD,
       },
