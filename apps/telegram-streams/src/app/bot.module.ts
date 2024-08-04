@@ -1,23 +1,24 @@
 import { Global, Module } from '@nestjs/common';
-
 import { TelegrafModule } from 'nestjs-telegraf';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 import { HomeModule } from '@telegram-streams/home';
 import { BotUpdate } from './bot.update';
 import { session } from 'telegraf';
+import {
+  AppConfigModule,
+  AppConfigService,
+} from '@telegram-streams/app-config';
 
 @Global()
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    AppConfigModule,
     TelegrafModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        token: configService.get<string>('TELEGRAM_BOT_KEY'),
+      useFactory: (config: AppConfigService) => ({
+        token: config.botToken,
         middlewares: [session()],
         include: [HomeModule],
       }),
-      inject: [ConfigService],
+      inject: [AppConfigService],
     }),
     HomeModule,
   ],
