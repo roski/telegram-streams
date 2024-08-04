@@ -17,6 +17,7 @@
     "paths": {
       "@telegram-streams/app-config": ["libs/config/src/index.ts"],
       "@telegram-streams/bot": ["libs/bot/src/index.ts"],
+      "@telegram-streams/database": ["libs/database/src/index.ts"],
       "@telegram-streams/home": ["libs/home/src/index.ts"],
       "@telegram-streams/models": ["libs/shared/models/src/index.ts"],
       "@telegram-streams/telegram": ["libs/telegram/src/index.ts"]
