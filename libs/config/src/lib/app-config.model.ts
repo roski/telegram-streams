@@ -1,15 +1,23 @@
 export enum AppConfigKeys {
-  TelegramBotToken = 'TELEGRAM_BOT_TOKEN',
-  DbSynchronize = 'DB_SYNCHRONIZE',
+  DbHost = 'DB_HOST',
   DbLogging = 'DB_LOGGING',
   DbName = 'DB_NAME',
+  DbPassword = 'DB_PASSWORD',
+  DbPort = 'DB_PORT',
+  DbSynchronize = 'DB_SYNCHRONIZE',
+  DbUsername = 'DB_USERNAME',
+  TelegramBotToken = 'TELEGRAM_BOT_TOKEN',
 }
 
 export interface AppConfig {
-  [AppConfigKeys.TelegramBotToken]: string;
-  [AppConfigKeys.DbSynchronize]: boolean;
+  [AppConfigKeys.DbHost]: string;
   [AppConfigKeys.DbLogging]: boolean;
   [AppConfigKeys.DbName]: string;
+  [AppConfigKeys.DbPassword]: string;
+  [AppConfigKeys.DbPort]: number;
+  [AppConfigKeys.DbSynchronize]: boolean;
+  [AppConfigKeys.DbUsername]: string;
+  [AppConfigKeys.TelegramBotToken]: string;
 }
 
 /** Ensure all keys in T are present in U */
