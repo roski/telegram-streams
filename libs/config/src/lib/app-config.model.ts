@@ -6,6 +6,8 @@ export enum AppConfigKeys {
   DbPort = 'DB_PORT',
   DbSynchronize = 'DB_SYNCHRONIZE',
   DbUsername = 'DB_USERNAME',
+  RedisHost = 'REDIS_HOST',
+  RedisPort = 'REDIS_PORT',
   TelegramBotToken = 'TELEGRAM_BOT_TOKEN',
 }
 
@@ -17,6 +19,8 @@ export interface AppConfig {
   [AppConfigKeys.DbPort]: number;
   [AppConfigKeys.DbSynchronize]: boolean;
   [AppConfigKeys.DbUsername]: string;
+  [AppConfigKeys.RedisHost]: string;
+  [AppConfigKeys.RedisPort]: number;
   [AppConfigKeys.TelegramBotToken]: string;
 }
 

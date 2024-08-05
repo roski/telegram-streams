@@ -19,6 +19,8 @@ import { AppConfigKeys } from './app-config.model';
         [AppConfigKeys.DbSynchronize]: Joi.boolean().default(false),
         [AppConfigKeys.DbUsername]: Joi.string().required(),
         [AppConfigKeys.TelegramBotToken]: Joi.string().required(),
+        [AppConfigKeys.RedisHost]: Joi.string().required(),
+        [AppConfigKeys.RedisPort]: Joi.number().port().default(6379),
       }),
     }),
   ],

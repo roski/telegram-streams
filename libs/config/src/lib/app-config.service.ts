@@ -24,4 +24,10 @@ export class AppConfigService {
       username: this.configService.get<string>(AppConfigKeys.DbUsername),
     };
   }
+
+  get redisUrl(): string {
+    const redisPort = this.configService.get<number>(AppConfigKeys.RedisPort);
+    const redisHost = this.configService.get<string>(AppConfigKeys.RedisHost);
+    return `redis://${redisHost}:${redisPort}`;
+  }
 }
