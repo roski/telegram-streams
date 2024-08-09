@@ -14,7 +14,6 @@ export class AppConfigService {
   get typeOrmConfig(): DataSourceOptions {
     return {
       database: this.configService.get<string>(AppConfigKeys.DbName),
-      entities: [__dirname + '../../**/*.entity{.ts,.js}'],
       host: this.configService.get<string>(AppConfigKeys.DbHost),
       logging: this.configService.get<boolean>(AppConfigKeys.DbLogging),
       password: this.configService.get<string>(AppConfigKeys.DbPassword),
