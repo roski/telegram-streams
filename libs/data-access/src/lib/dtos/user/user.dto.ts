@@ -3,7 +3,7 @@ import {
   AbstractDtoOptions,
   UserRole,
 } from '@telegram-streams/models';
-import { UserEntity } from '../../database/entities/user.entity';
+import { UserEntity } from '../../database';
 
 export type UserDtoOptions = AbstractDtoOptions;
 
