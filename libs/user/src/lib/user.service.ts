@@ -16,7 +16,7 @@ export class UserService {
     return this.userRepository.findOneBy(find);
   }
 
-  createUser(user: UserEntity): Promise<UserEntity> {
+  async createUser(user: UserEntity): Promise<UserEntity> {
     return this.userRepository.save(user);
   }
 }

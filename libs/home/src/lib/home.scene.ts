@@ -1,5 +1,5 @@
 import { Ctx, Scene, SceneEnter } from 'nestjs-telegraf';
-import { BotScene } from '@telegram-streams/models';
+import { BotScene } from '@telegram-streams/shared';
 import { SceneContext } from 'telegraf/scenes';
 
 /** Home scene keyboard */

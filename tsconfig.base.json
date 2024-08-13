@@ -19,7 +19,7 @@
       "@telegram-streams/bot": ["libs/bot/src/index.ts"],
       "@telegram-streams/data-access": ["libs/data-access/src/index.ts"],
       "@telegram-streams/home": ["libs/home/src/index.ts"],
-      "@telegram-streams/models": ["libs/shared/models/src/index.ts"],
+      "@telegram-streams/shared": ["libs/shared/src/index.ts"],
       "@telegram-streams/telegram": ["libs/telegram/src/index.ts"],
       "@telegram-streams/user": ["libs/user/src/index.ts"]
     }
