@@ -2,7 +2,7 @@ import {
   AbstractDto,
   AbstractDtoOptions,
   UserRole,
-} from '@telegram-streams/shared';
+} from '@telegram-streams/models';
 import { UserEntity } from '../../database';
 
 export type UserDtoOptions = AbstractDtoOptions;

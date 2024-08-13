@@ -1,7 +1,7 @@
 import { Ctx, Start, Update } from 'nestjs-telegraf';
 import { SceneContext } from 'telegraf/scenes';
 import { Logger } from '@nestjs/common';
-import { BotScene } from '@telegram-streams/shared';
+import { BotScene } from '@telegram-streams/models';
 
 @Update()
 export class BotUpdate {

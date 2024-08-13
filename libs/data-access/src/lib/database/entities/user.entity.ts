@@ -1,5 +1,5 @@
 import { Column, Entity, VirtualColumn } from 'typeorm';
-import { AbstractEntity, UserRole } from '@telegram-streams/shared';
+import { AbstractEntity, UserRole } from '@telegram-streams/models';
 import { instanceToPlain } from 'class-transformer';
 import { UserDto, UserDtoOptions } from '../../dtos/user';
 
