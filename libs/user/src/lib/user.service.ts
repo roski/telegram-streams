@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserEntity } from '@telegram-streams/data-access';
+import { UserCreateDto, UserEntity } from '@telegram-streams/data-access';
 import { FindOptionsWhere, Repository } from 'typeorm';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class UserService {
     return this.userRepository.findOneBy(find);
   }
 
-  createUser(user: UserEntity): Promise<UserEntity> {
+  createUser(user: UserCreateDto): Promise<UserEntity> {
     return this.userRepository.save(user);
   }
 }

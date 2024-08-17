@@ -1,10 +1,13 @@
 import { Column, Entity, VirtualColumn } from 'typeorm';
 import { AbstractEntity, UserRole } from '@telegram-streams/models';
 import { instanceToPlain } from 'class-transformer';
-import { UserDto, UserDtoOptions } from '../../dtos/user';
+import { UserDto, UserDtoOptions } from '../../dtos';
 
 @Entity({ name: 'users' })
 export class UserEntity extends AbstractEntity<UserDto, UserDtoOptions> {
+  @Column({ type: 'bigint' })
+  telegramId!: number;
+
   @Column({ nullable: true, type: String })
   firstName!: string | null;
 
